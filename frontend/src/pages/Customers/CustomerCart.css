@@ -1,0 +1,230 @@
+/* Cart Container Styles */
+.cart-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
+}
+
+/* Cart Title */
+/* Cart Title */
+.cart-title {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #333;
+  font-weight: 600;
+  position: relative; /* Needed for the line position */
+}
+
+.cart-title::after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 2px;
+  background-color: #007bff; /* Blue color for the line */
+  bottom: -10px; /* Adjusts the line position */
+  left: 25%; /* Centers the line under the title */
+}
+
+
+/* Cart Items */
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Cart Item Styling */
+.cart-item {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  transition: transform 0.3s ease;
+  justify-content: space-between; /* Space out the items */
+}
+
+.cart-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.item-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-left: 20px;
+  margin-right: 20px;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.cart-item:hover .item-image {
+  transform: scale(1.1); /* Pop effect */
+}
+
+.item-details {
+  flex: 1;
+  margin-right: 20px; /* Space between details and image */
+}
+
+.item-details h3 {
+  margin: 0 0 5px;
+  font-size: 18px;
+  color: #333;
+}
+
+.item-details p {
+  margin: 5px 0;
+  font-size: 16px;
+  color: #555;
+}
+
+/* Quantity Controls */
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.quantity-controls button {
+  width: 35px;
+  height: 35px;
+  border: none;
+  background: #007bff;
+  color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.quantity-controls button:hover {
+  background: #005bb5;
+  transform: scale(1.1);
+}
+
+/* Remove Item Button */
+.remove-item {
+  background: #e74c3c;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.remove-item:hover {
+  background: #c0392b;
+  transform: scale(1.05);
+}
+
+/* Cart Summary Section */
+.cart-summary {
+  margin-top: 20px;
+  text-align: right;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Payment Form Styles */
+.payment-form {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Payment Form Title */
+.payment-form h3 {
+  margin: 0;
+  font-size: 22px;
+  text-align: center;
+  color: #333;
+  font-weight: 600;
+  position: relative; /* Needed for the line position */
+  padding-bottom: 10px; /* Adds some space below the text */
+}
+
+.payment-form h3::after {
+  content: "";
+  position: absolute;
+  width: 60%; /* Adjusts the line width */
+  height: 2px;
+  background-color: #007bff; /* Blue color for the line */
+  bottom: 0;
+  left: 20%; /* Centers the line under the title */
+}
+
+
+/* Payment Option Section */
+.payment-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.payment-option {
+  font-size: 18px;
+  color: #555;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.payment-option input[type="radio"] {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+/* Payment Button Styling */
+.payment-button {
+  padding: 12px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.payment-button:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+/* Quantity Input Field */
+.quantity-input {
+  width: 50px;
+  text-align: center;
+  font-size: 16px;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Error Messages */
+.error {
+  color: red;
+  font-size: 14px;
+}
+
+/* Fix Background */
+body {
+  background: url("../../assets/farm-bg.jpg") no-repeat center center/cover;
+  background-attachment: fixed; /* Fixed background */
+  background-size: cover;
+  min-height: 100vh;
+}

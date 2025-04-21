@@ -1,0 +1,107 @@
+/* CustomerPayment.css */
+
+.payment-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f0f9ff, #c0e6ed);
+}
+
+.payment-box {
+  background: #ffffff;
+  padding: 40px 50px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 450px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.payment-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.payment-title {
+  margin-bottom: 25px;
+  font-size: 30px;
+  color: #333;
+  font-weight: bold;
+  position: relative;
+}
+
+.payment-title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background-color: #28a745;
+  margin: 10px auto;
+  border-radius: 2px;
+}
+
+.payment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.payment-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  color: #444;
+  background: #f9f9f9;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.payment-option:hover {
+  background-color: #e0f7e9;
+}
+
+.payment-option input[type="radio"] {
+  transform: scale(1.3);
+  cursor: pointer;
+}
+
+.payment-button {
+  padding: 14px;
+  background: linear-gradient(135deg, #34d058, #28a745);
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.4s ease, transform 0.2s;
+  box-shadow: 0 6px 15px rgba(40, 167, 69, 0.3);
+}
+
+.payment-button:hover {
+  background: linear-gradient(135deg, #218838, #1f7435);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 128, 0, 0.4);
+}
+
+.payment-button:active {
+  transform: translateY(2px);
+  box-shadow: 0 4px 10px rgba(0, 128, 0, 0.2);
+}
+
+.payment-info {
+  font-size: 16px;
+  color: #666;
+  margin-top: 15px;
+  text-align: left;
+}
+
+.payment-info strong {
+  color: #000;
+}

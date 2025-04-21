@@ -1,0 +1,118 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Farmer Register Page Styling */
+.register-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* Ensures full screen coverage */
+  width: 100%;
+  background: url("../../assets/farm-bg.jpg") no-repeat center center/cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Register Box */
+.register-box {
+  background: rgba(255, 255, 255, 0.98); /* Slight transparency */
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  width: 380px;
+  text-align: center;
+  z-index: 1; /* Ensures it stays above the background */
+}
+
+/* Title */
+.register-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #2e7d32;
+  margin-bottom: 20px;
+}
+
+/* Register Form */
+.register-form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Input Fields */
+.register-input {
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #bbb;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border 0.3s ease-in-out;
+}
+
+.register-input:focus {
+  border-color: #388e3c;
+  outline: none;
+}
+
+/* Register Button */
+.register-button {
+  background: #4caf50;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s ease-in-out;
+}
+
+.register-button:hover {
+  background: #2e7d32;
+  transform: translateY(-2px);
+}
+
+/* Additional Text */
+.register-text {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* Links */
+.register-link {
+  color: #1976d2;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: underline;
+  transition: color 0.3s ease-in-out;
+}
+
+.register-link:hover {
+  color: #0d47a1;
+}
+
+.customer-link {
+  color: #d32f2f;
+  font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .register-box {
+      width: 85%;
+      padding: 20px;
+  }
+
+  .register-title {
+      font-size: 20px;
+  }
+
+  .register-button {
+      font-size: 14px;
+      padding: 10px;
+  }
+}

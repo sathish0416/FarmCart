@@ -1,0 +1,137 @@
+/* /Subscriptions Container */ 
+ .subscriptions-container { 
+  padding: 24px;
+  background: transparent; 
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 16px;
+  width: 100%;
+  max-width: 900px;
+  margin: 40px auto;
+  font-family: 'Roboto', sans-serif;
+  transition: all 0.3s ease;
+} 
+
+.subscriptions-container:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+}
+
+/* Title */
+.subscriptions-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #1e293b;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Toggle Button */
+.toggle-button {
+  background: linear-gradient(135deg, #34d399, #059669);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  display: block;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.toggle-button:hover {
+  background: linear-gradient(135deg, #059669, #34d399);
+  transform: translateY(-2px);
+}
+
+/* Farmers List */
+.farmers-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.farmer-item {
+  padding: 20px;
+  border-radius: 12px;
+  background: #f3f4f6;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.farmer-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  background: #ffffff;
+}
+
+/* Action Buttons */
+.action-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.subscribe-btn, .unsubscribe-btn, .message-btn, .view-btn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.subscribe-btn {
+  background: linear-gradient(135deg, #10b981, #065f46);
+}
+
+.subscribe-btn:hover {
+  background: linear-gradient(135deg, #065f46, #10b981);
+  transform: translateY(-2px);
+}
+
+.unsubscribe-btn {
+  background: linear-gradient(135deg, #ef4444, #b91c1c);
+}
+
+.unsubscribe-btn:hover {
+  background: linear-gradient(135deg, #b91c1c, #ef4444);
+  transform: translateY(-2px);
+}
+
+.message-btn, .view-btn {
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+}
+
+.message-btn:hover, .view-btn:hover {
+  background: linear-gradient(135deg, #1e40af, #2563eb);
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .subscriptions-container {
+      padding: 16px;
+  }
+
+  .farmers-list {
+      grid-template-columns: 1fr;
+  }
+
+  .action-buttons {
+      flex-wrap: wrap;
+      gap: 8px;
+  }
+}

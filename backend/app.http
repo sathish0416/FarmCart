@@ -1,0 +1,214 @@
+### Register Farmer
+POST http://localhost:5000/api/farmer/register
+Content-Type: application/json
+
+{
+    "name": "Jagadeesh",
+    "password": "password123",
+    "phone": "0000000000",
+    "address": "123 Farm Lane"
+}
+
+### Login and store token
+POST http://localhost:5000/api/farmer/login
+Content-Type: application/json
+
+{
+  "phone": "0000000000",
+  "password": "password123"
+}
+
+
+### store token manually
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3OWZiZDA0NGZiYWY0N2Q2N2QxZDNlOCIsInBob25lIjoiMDAwMDAwMDAwMCIsImlhdCI6MTczODUyMTg4MCwiZXhwIjoxNzM4NTI1NDgwfQ.m-0TrEbnY4MX50clffmxPzLcXm4p2c2Mo_g3lYy0kfE
+### Add Product
+POST http://localhost:5000/api/farmer/products
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YTExOGM4Y2M5MWRlNTgxODM0M2UwNyIsInBob25lIjoiMDAwMDAwMDAwMCIsImlhdCI6MTczODYxMDkzMiwiZXhwIjoxNzM4NjE0NTMyfQ.HjEWSW_Xbpjzq6fqo0B8EV13Ii4g6tEHG815RP6PJJM
+Content-Type: application/json
+
+{
+  "name": "Organic Potatoes",
+  "category":"Vegetables",
+  "marketRate": 20,
+  "price": 15.99,
+  "quantity": 100,
+  "expiryDate": "2025-06-15"
+}
+
+
+### Update Product
+PUT http://localhost:5000/api/farmer/products/679f4e832ef9df7e4a59b1a9
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3OWVlNWFkZDliY2JkMGE5YTJkODAyMyIsInBob25lIjoiMTIzNDU2NzgxMCIsImlhdCI6MTczODQ5MzA2NCwiZXhwIjoxNzM4NDk2NjY0fQ.nHS0nbua7SBnENz0hXa1hVH9Z1WkgeeGGW2EdoWyuwA
+Content-Type: application/json
+
+{
+  "name": "Organic Tomatoes",
+  "price": 15.99,
+  "quantity": 100,
+  "expiryDate": "2025-06-15"
+}
+
+### Delete Product
+DELETE http://localhost:5000/api/farmer/products/679f4e832ef9df7e4a59b1a9
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3OWVlNWFkZDliY2JkMGE5YTJkODAyMyIsInBob25lIjoiMTIzNDU2NzgxMCIsImlhdCI6MTczODQ5MzA2NCwiZXhwIjoxNzM4NDk2NjY0fQ.nHS0nbua7SBnENz0hXa1hVH9Z1WkgeeGGW2EdoWyuwA
+
+
+
+
+### View Orders
+GET http://localhost:5000/api/farmer/orders
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3OWVlNWFkZDliY2JkMGE5YTJkODAyMyIsInBob25lIjoiMTIzNDU2NzgxMCIsImlhdCI6MTczODQ5MzE0NCwiZXhwIjoxNzM4NDk2NzQ0fQ.DXAeZkS-phc0_EfseQMMOgkjNxzJk0nwJaxquLIbSBU
+
+
+### Update Order Status
+PUT http://localhost:5000/api/farmer/orders
+Authorization : Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3OWE2MjU5YjliOGYwYTZhNmQ4YWEwOCIsImVtYWlsIjoiYWRtaW5AZXhhbXBsZS5jb20iLCJpYXQiOjE3MzgyMzUzNjYsImV4cCI6MTczODIzODk2Nn0.zC4d5gpsZCC4594xCwEJZthGKAvAb_mgcaFWMyDResk
+Content-Type: application/json
+
+{
+  "orderId":"679b5f5a77e3797da03c3c3f",
+  "status":"Delivered"
+}
+
+### Get Products
+GET http://localhost:5000/api/farmer/products
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3OWZiNmE0NWJlZjdhYmQ3ZjRkMTNmNiIsInBob25lIjoiODY4ODA5NDMwMCIsImlhdCI6MTczODUyNjIzMCwiZXhwIjoxNzM4NTI5ODMwfQ.Rp5hnkfFTAnm51VfvyK7jSeVxU8NAzpx05I2mBp0PMM
+
+### View Products
+
+GET http://localhost:5000/api/farmer/products
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3OWZiNmE0NWJlZjdhYmQ3ZjRkMTNmNiIsInBob25lIjoiODY4ODA5NDMwMCIsImlhdCI6MTczODUyNjYyMSwiZXhwIjoxNzM4NTMwMjIxfQ.6mYmE4OwybsUenJvPEgqfSXOaLzoZ-pby0rfnJC2rSE
+
+### Register Customer
+POST http://localhost:5000/api/customer/register
+Content-Type: application/json
+
+{
+    "name": "John Doe",
+    "email": "john1@example.com",
+    "password": "securepassword",
+    "phone": "1234567890",
+    "address": "123 Main Street"
+}
+
+### Login Customer
+POST http://localhost:5000/api/customer/login
+Content-Type: application/json
+
+{
+    "email": "john1@example.com",
+    "password": "securepassword"
+}
+
+### GET approved products
+GET http://localhost:5000/api/customer/products
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3OWExZmQ0MjVkMDY0ODgzY2FmNDNkYiIsImVtYWlsIjoiam9obkBleGFtcGxlLmNvbSIsImlhdCI6MTczODQ5NjQyNiwiZXhwIjoxNzM4NTAwMDI2fQ.sByq4OUbi7CN1iS2kln0tCAHKW4MpWLPTvSir8nRiMc
+
+### GET CUSTOMER ORDERS
+GET http://localhost:5000/api/customer/order
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3OWExZmQ0MjVkMDY0ODgzY2FmNDNkYiIsImVtYWlsIjoiam9obkBleGFtcGxlLmNvbSIsImlhdCI6MTczODQ5NjQyNiwiZXhwIjoxNzM4NTAwMDI2fQ.sByq4OUbi7CN1iS2kln0tCAHKW4MpWLPTvSir8nRiMc
+
+### Register Admin
+POST http://localhost:5000/api/admin/register
+Content-Type: application/json
+
+{
+  "email": "admin@example.com",
+  "password": "securepassword"
+}
+
+### login Admin
+POST http://localhost:5000/api/admin/login
+Content-Type: application/json
+
+{
+  "email": "admin@example.com",
+  "password": "securepassword"
+}
+
+### Get all farmers
+GET http://localhost:5000/api/admin/farmers
+Authorization : Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3OWE2MjU5YjliOGYwYTZhNmQ4YWEwOCIsImVtYWlsIjoiYWRtaW5AZXhhbXBsZS5jb20iLCJpYXQiOjE3MzgyMzQzODUsImV4cCI6MTczODIzNzk4NX0.CSj_G9c-SiSGzZnmXyifkyxi0E_zV48gv8Ck82yt4K0
+### Get all products
+GET http://localhost:5000/api/admin/products
+Authorization : Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3OWE2MjU5YjliOGYwYTZhNmQ4YWEwOCIsImVtYWlsIjoiYWRtaW5AZXhhbXBsZS5jb20iLCJpYXQiOjE3Mzg0OTY1NDksImV4cCI6MTczODUwMDE0OX0.U0dI1R3ZWT1FRZ0JcTfj2FL3FS7Zogdt-ELKyC6hPyU
+
+
+
+
+### Approve a farmer
+PUT http://localhost:5000/api/admin/farmer
+Content-Type: application/json
+Authorization : Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3OWE2MjU5YjliOGYwYTZhNmQ4YWEwOCIsImVtYWlsIjoiYWRtaW5AZXhhbXBsZS5jb20iLCJpYXQiOjE3MzgxNzEwNjgsImV4cCI6MTczODE3NDY2OH0.vlisjGIKeiM1vNWv0eryvltprDf5SaYgqiqzcNp7qkI
+
+{
+    "id":"6799252c397ee2f41503df90",
+    "verificationStatus":"approved"
+}
+
+### Approve a product
+PUT http://localhost:5000/api/admin/product
+Content-Type: application/json
+Authorization : Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3OWE2MjU5YjliOGYwYTZhNmQ4YWEwOCIsImVtYWlsIjoiYWRtaW5AZXhhbXBsZS5jb20iLCJpYXQiOjE3MzgxNzEwNjgsImV4cCI6MTczODE3NDY2OH0.vlisjGIKeiM1vNWv0eryvltprDf5SaYgqiqzcNp7qkI
+
+{
+    "id":"67999d88a72c6c768554c18c",
+    "status":"Approved"
+}
+
+### get ALL customer
+GET http://localhost:5000/api/admin/customers
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3OWExZmQ0MjVkMDY0ODgzY2FmNDNkYiIsImVtYWlsIjoiam9obkBleGFtcGxlLmNvbSIsImlhdCI6MTczODIyNDE4OSwiZXhwIjoxNzM4MjI3Nzg5fQ.NwQN75dWzOcJHTafeLyvGmGeDFTlWqeFiWEF4aRWKEE
+
+### Place order
+POST http://localhost:5000/api/customer/order
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YTExZTZlNzljMzM1NDg4M2U5Y2ZkYSIsImVtYWlsIjoiam9objFAZXhhbXBsZS5jb20iLCJpYXQiOjE3Mzg2MTI0MDMsImV4cCI6MTczODYxNjAwM30.foxpltBIkVDF5zdOCRayKixwKrF3YeMRN9KkO37DQ0s
+
+{
+    "customerId": "67a11e6e79c3354883e9cfda",
+    "products": [
+        {
+            "_id": "67a0f005ba8b0d21a6a6ef20",
+            "quantity": 2
+        }
+    ]
+}
+
+### Add Product to Wishlist
+POST http://localhost:5000/api/customer/wishlist
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YTA1Y2IwMmE0MDAwMzIxMmM2NDRlNCIsImVtYWlsIjoiam9objFAZXhhbXBsZS5jb20iLCJpYXQiOjE3Mzg1NjM4MDUsImV4cCI6MTczODU2NzQwNX0.K2CFzPJwbt7Ea1OE_u-9nin3x9MjoG57JSRmhu0-UC0
+
+{
+    "productId": "679fbd464fbaf47d67d1d3ec"
+}
+
+
+
+### get geo coordinates
+GET http://localhost:5000/api/location/geocode?address=New York
+
+
+<<<<<<< HEAD
+
+GET http://localhost:5000/api/farmer/sales-analysis
+
+
+=======
+### Create Notification
+POST http://localhost:5000/api/notification/create
+Content-Type: application/json
+
+{
+  "userId": "67a0ce070e40d8257cf4490d",  
+  "userRole": "Customer", 
+  "message": "Your order has been shipped."
+}
+
+### Get Notification
+GET http://localhost:5000/api/notification/67a0efd6ba8b0d21a6a6ef1c
+>>>>>>> 2043acd0d439962c49fe4869599189a11ce38c2d

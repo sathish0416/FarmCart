@@ -1,0 +1,98 @@
+/* CustomerProfile.css */
+
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url('../../assets/farm-bg.jpg') no-repeat center center/cover;
+  padding: 40px 20px;
+  background-attachment: fixed; /* Ensures the background stays fixed */
+}
+
+/* Profile Card */
+.profile-box {
+  background: rgba(255, 255, 255, 0.2); /* Lighter background with some transparency */
+  backdrop-filter: blur(12px); /* Slightly stronger blur for contrast */
+  padding: 40px 30px;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow for better pop-up effect */
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-box:hover {
+  transform: translateY(-10px); /* Subtle hover effect for "floating" look */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
+}
+
+/* Profile Title */
+.profile-title {
+  font-size: 30px; /* Slightly larger title for emphasis */
+  font-weight: bold;
+  margin-bottom: 25px;
+  color: #f8f8f8;
+}
+
+/* Two-Column Layout for Profile Details */
+.profile-details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px; /* More spacing between items */
+  text-align: left;
+  margin-top: 20px;
+}
+
+.profile-item {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.25); /* Slightly more transparent background */
+  padding: 14px;
+  border-radius: 10px;
+}
+
+.profile-icon {
+  font-size: 22px; /* Larger icon for better visual appeal */
+  margin-right: 12px;
+  color: #ffd700;
+}
+
+.profile-text {
+  font-size: 17px;
+  color: #f0f0f0;
+}
+
+/* Edit Profile Button */
+.edit-profile-button {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  margin-top: 30px;
+  background: linear-gradient(135deg, #6ab04c, #2d6a4f);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px; /* Larger button text */
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.edit-profile-button:hover {
+  background: linear-gradient(135deg, #2d6a4f, #6ab04c);
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .profile-box {
+      padding: 20px;
+      max-width: 90%;
+  }
+  .profile-details {
+      grid-template-columns: 1fr;
+  }
+}

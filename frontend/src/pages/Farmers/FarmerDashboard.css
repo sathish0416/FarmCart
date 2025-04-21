@@ -1,0 +1,144 @@
+dashboard{
+  background: url("../../assets/farm-bg.jpg") no-repeat center center/cover;
+  background-attachment: fixed;
+}
+.dashboard-container {
+  padding: 20px;
+
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+
+  /* background-image: url("../../assets/farm-bg.jpg"); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; */
+}
+
+.dashboard-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.items-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.item-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 15px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.item-card:hover {
+  transform: scale(1.02);
+}
+
+.item-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.item-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.item-category {
+  font-size: 14px;
+  color: gray;
+  margin-bottom: 5px;
+}
+
+.item-seller {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.item-price,
+.item-quantity {
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.selling-price strong {
+  color: green;
+}
+
+.item-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.edit-button,
+.delete-button {
+  flex: 1;
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  transition: background 0.2s;
+}
+
+.edit-button {
+  background: white;
+}
+
+.edit-button:hover {
+  background: lightgray;
+}
+
+.delete-button {
+  background: #ffebeb;
+  color: red;
+}
+
+.delete-button:hover {
+  background: #ffcccc;
+}
+
+.no-items {
+  text-align: center;
+  font-size: 16px;
+  color: gray;
+}
+
+.add-item-card {
+  background: #f8f8f8;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.add-item-card:hover {
+  background: #eaeaea;
+}
+
+.add-item-link {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}

@@ -1,0 +1,39 @@
+.add-item-container {
+  max-width: 350px; /* Decrease the width further */
+  margin: 40px auto;
+  background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent white */
+  padding: 15px; /* Decrease padding */
+  border-radius: 18px;
+  box-shadow: 10px 4px 12px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+  text-align: center;
+  backdrop-filter: blur(10px); /* Adds blur effect to the background */
+  border: 1px solid rgba(255, 255, 255, 0.5); /* Optional: Border for definition */
+}
+
+h2 {
+  font-size: 32px; /* Reduced font size */
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px; /* Reduced padding */
+  margin: 8px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px; /* Slightly smaller font size */
+}
+
+.submit-button {
+  background-color: #28a745;
+  color: #fff;
+  padding: 10px 16px; /* Smaller button */
+  font-size: 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #218838;
+}

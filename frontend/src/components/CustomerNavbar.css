@@ -1,0 +1,181 @@
+/* Container */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background: linear-gradient(135deg, #a4c639, #859F3D);
+  padding: 12px 24px;
+  box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.15);
+  border-radius: 40px;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  transition: transform 0.3s ease; /* Smooth transition for hide/show effect */
+}
+
+/* The initial state of the navbar */
+.navbar.hidden {
+  transform: translateY(-100%); /* Hide navbar by moving it up */
+}
+
+/* Other sections like logo, account, dropdown remain the same */
+
+
+/* Logo Section */
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #FFF8E1;
+  text-transform: uppercase;
+  gap: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  margin-left: -20px; /* Shifted slightly left */
+}
+
+.logo-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  object-fit: cover;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+/* Account Section */
+.account {
+  display: flex;
+  align-items: center;
+}
+
+.account:hover {
+  color: #FFD740; /* Hover color change */
+}
+
+/* Dropdown Menu */
+.dropdown {
+  position: relative;
+  margin-right: 20px;
+}
+
+.dropdown-btn {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-transform: capitalize;
+  transition: color 0.3s ease;
+}
+
+.dropdown-btn:hover {
+  color: #FFF176;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  background: rgba(255, 255, 255, 0.97);
+  border: 1px solid #DDD;
+  list-style: none;
+  padding: 12px;
+  min-width: 180px;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+  display: block;
+  z-index: 1000;
+  border-radius: 8px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+}
+
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-menu li {
+  padding: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #333;
+  transition: all 0.3s ease-in-out;
+  border-radius: 5px;
+}
+
+.dropdown-menu li:nth-child(1),
+.dropdown-menu li:nth-child(2),
+.dropdown-menu li:nth-child(3) {
+  background: #E0F7FA;
+}
+
+.dropdown-menu li:nth-child(1):hover,
+.dropdown-menu li:nth-child(2):hover,
+.dropdown-menu li:nth-child(3):hover {
+  background: #0ec8e1;
+  color: white;
+}
+
+.dropdown-menu li.logout {
+  color: #fb0505;
+  background: #FFF1F0;
+}
+
+.dropdown-menu li.logout:hover {
+  background: #D32F2F;
+  color: white;
+}
+
+.divider {
+  height: 1px;
+  background: #E0E0E0;
+  margin: 8px 0;
+}
+
+/* Icons Section */
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size:34;
+}
+
+.icon-link {
+  text-decoration: none;
+  color: white;
+  font-size: 1.7rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.icon-link:hover {
+  color: #FF8A80;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+  }
+
+  .account {
+    margin-top: 10px;
+  }
+
+  .icons {
+    margin-top: 10px;
+  }
+}
