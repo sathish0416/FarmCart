@@ -65,3 +65,9 @@ A MERN stack e-commerce platform bridging the gap between farmers and customers 
 1. Clone the repository
 ```bash
 git clone https://github.com/sathish0416/Farm_Cart
+
+
+## 🔗 Live Demo
+
+**Frontend (Customer & Farmer Portal)**: [FarmCart - Customer & Farmer Portal](https://farmcartpro.netlify.app/)
+- **Admin Dashboard**: [FarmCart - Admin Dashboard](https://farmcartproadmin.netlify.app/)
